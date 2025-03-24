@@ -35,23 +35,10 @@ class Program
         }
         return 1.0 / factorial;
     }
-
+    
     public static double ThirdSeriesTerm(int n)
     {
-        double sign;
-
-        if (n % 2 == 0)
-        {
-            sign = 1;
-        }
-        else
-        {
-            sign = -1;
-        }
-        double term = sign / Math.Pow(2, n);
-
-        return term;
-
+        return Math.Pow(-1, n + 1) / Math.Pow(2, n);
     }
 
     static void Main()
